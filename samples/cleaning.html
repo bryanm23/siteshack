@@ -4,89 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bright Hour Cleaning — Sample cleaning website</title>
-    <meta name="description" content="A sample cleaning website by The Site Shack for a New Jersey small business. Not a real company." />
+    <meta name="description" content="A sample cleaning website by The Site Shack. Not a real company." />
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body data-theme="cleaning">
+  <body>
     <a class="skip" href="#content">Skip to content</a>
-    <div class="sample-bar">
+    <div class="return-bar">
       <a href="/">The Site Shack</a>
-      <p>Sample · Cleaning · New Jersey</p>
+      <span>Sample · Cleaning</span>
       <a href="/samples/">All samples</a>
     </div>
-    <header class="biz-header">
-      <div class="biz-wrap">
-        <a class="biz-name" href="#content">Bright Hour Cleaning</a>
-        <nav aria-label="Bright Hour Cleaning">
+    <div class="clean">
+      <nav class="clean-nav" aria-label="Bright Hour Cleaning">
+        <a href="#content">Bright Hour</a>
+        <span>
           <a href="#services">Services</a>
-          <a href="#area">Area</a>
           <a href="#visit">Call</a>
-        </nav>
-      </div>
-    </header>
-    <main id="content">
-      <section class="biz-hero">
-        <div class="biz-wrap">
-          <p class="biz-kicker">Cleaning · New Jersey</p>
+        </span>
+      </nav>
+      <main id="content">
+        <section class="clean-hero">
           <h1>A house that stays looked after.</h1>
-          <p class="biz-lede">Recurring home cleaning, move-out cleans, and small offices in New Jersey. The site says what a visit includes.</p>
-          <div class="biz-actions">
-            <a class="biz-call" href="tel:+15550100108">Call (555) 010-0108</a>
-            <a class="biz-text" href="#services">See the work</a>
-          </div>
+          <p>Recurring home cleaning, move-out cleans, and small offices in New Jersey. The site says what a visit includes.</p>
+          <a class="btn" href="tel:+15550100108">Call (555) 010-0108</a>
+        </section>
+        <div class="clean-frame">
+          <img src="/images/clean-kitchen.jpg" alt="A bright, spotless white kitchen" />
         </div>
-      </section>
-      <section class="biz-band" id="services" aria-labelledby="services-title">
-        <div class="biz-wrap">
-          <h2 id="services-title">What the visit covers</h2>
-          <div class="biz-grid">
-          <article>
-            <h3>Recurring cleans</h3>
-            <p>The same checklist every other week, or every week if that is the house you have.</p>
-          </article>
-          <article>
-            <h3>Move-out cleans</h3>
-            <p>Empty rooms, inside the appliances, and the bath ready for the next person.</p>
-          </article>
-          <article>
-            <h3>Small offices</h3>
-            <p>After hours, so the desk is clear before the morning.</p>
-          </article>
-          </div>
-        </div>
-      </section>
-      <section class="biz-split" id="area" aria-labelledby="area-title">
-        <div class="biz-wrap biz-split-grid">
-          <div>
-            <h2 id="area-title">Where the work happens</h2>
-            <p>This sample covers New Jersey homes and small offices the team can reach in a morning. A real site would list those towns.</p>
-          </div>
-          <div>
-            <h2>How a job starts</h2>
-            <ol>
-              <li>You say how often and which rooms.</li>
-              <li>You get a price for that checklist.</li>
-              <li>The same crew comes back on the schedule you set.</li>
-            </ol>
-          </div>
-        </div>
-      </section>
-      <section class="biz-visit" id="visit" aria-labelledby="visit-title">
-        <div class="biz-wrap">
-          <h2 id="visit-title">Call this sample shop.</h2>
-          <p>Sample hours: Monday to Friday, 8am to 4pm. Evening office cleans by arrangement.</p>
-          <p><a href="tel:+15550100108">(555) 010-0108</a></p>
-          <p class="biz-note">Sample number. Bright Hour Cleaning is not a real business.</p>
-          <a class="biz-call" href="/#contact">Get a site like this</a>
-        </div>
-      </section>
-    </main>
-    <footer class="biz-foot">
-      <div class="biz-wrap">
-        <p>Sample website by <a href="/">The Site Shack</a>. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
-        <a href="/samples/">All samples</a>
-      </div>
+        <section class="clean-list" id="services">
+          <article><span>01</span><div><h2>Recurring cleans</h2><p>The same checklist every week, or every other week.</p></div></article>
+          <article><span>02</span><div><h2>Move-out cleans</h2><p>Empty rooms, the appliances, and a bath ready for the next person.</p></div></article>
+          <article><span>03</span><div><h2>Small offices</h2><p>After hours, so the desk is clear before morning.</p></div></article>
+        </section>
+        <img class="clean-bed" src="/images/clean-bed.jpg" alt="A neatly made bed with white linen" id="visit" />
+        <section class="clean-hero">
+          <h2>Call for a checklist price.</h2>
+          <p>Sample hours: Monday to Friday, 8am to 4pm. (555) 010-0108. Bright Hour Cleaning is not a real business.</p>
+        </section>
+      </main>
+    </div>
+    <footer class="return-foot">
+      <p>Sample website by <a href="/">The Site Shack</a>. Bright Hour Cleaning is not a real business. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
+      <a href="/#contact">Get a site like this</a>
     </footer>
     <script type="module" src="/src/samples.js"></script>
   </body>

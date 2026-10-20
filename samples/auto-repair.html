@@ -4,89 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Yardline Auto — Sample auto repair website</title>
-    <meta name="description" content="A sample auto repair website by The Site Shack for a New Jersey small business. Not a real company." />
+    <meta name="description" content="A sample auto repair website by The Site Shack. Not a real company." />
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body data-theme="auto">
+  <body>
     <a class="skip" href="#content">Skip to content</a>
-    <div class="sample-bar">
+    <div class="return-bar">
       <a href="/">The Site Shack</a>
-      <p>Sample · Auto repair · New Jersey</p>
+      <span>Sample · Auto repair</span>
       <a href="/samples/">All samples</a>
     </div>
-    <header class="biz-header">
-      <div class="biz-wrap">
-        <a class="biz-name" href="#content">Yardline Auto</a>
-        <nav aria-label="Yardline Auto">
+    <div class="auto">
+      <nav class="auto-nav" aria-label="Yardline Auto">
+        <a href="#content">Yardline Auto</a>
+        <span>
           <a href="#services">Services</a>
-          <a href="#area">Area</a>
           <a href="#visit">Call</a>
-        </nav>
-      </div>
-    </header>
-    <main id="content">
-      <section class="biz-hero">
-        <div class="biz-wrap">
-          <p class="biz-kicker">Auto repair · New Jersey</p>
-          <h1>Brakes, oil, and the light on the dash.</h1>
-          <p class="biz-lede">A New Jersey repair shop for the work people put off: brakes, oil, and the check-engine light that has been on since Tuesday.</p>
-          <div class="biz-actions">
-            <a class="biz-call" href="tel:+15550100109">Call (555) 010-0109</a>
-            <a class="biz-text" href="#services">See the work</a>
-          </div>
-        </div>
-      </section>
-      <section class="biz-band" id="services" aria-labelledby="services-title">
-        <div class="biz-wrap">
-          <h2 id="services-title">What the visit covers</h2>
-          <div class="biz-grid">
-          <article>
-            <h3>Brakes</h3>
-            <p>Noise, a soft pedal, or pads that are down to the wear bar.</p>
-          </article>
-          <article>
-            <h3>Oil and inspections</h3>
-            <p>The service that is due, and a New Jersey inspection when the sticker says so.</p>
-          </article>
-          <article>
-            <h3>Check-engine lights</h3>
-            <p>A diagnosis first, then the repair you approve. The site says it in that order.</p>
-          </article>
-          </div>
-        </div>
-      </section>
-      <section class="biz-split" id="area" aria-labelledby="area-title">
-        <div class="biz-wrap biz-split-grid">
+        </span>
+      </nav>
+      <main id="content">
+        <section class="auto-hero">
+          <img src="/images/auto-bay.jpg" alt="A car raised on a lift in a clean repair bay" />
           <div>
-            <h2 id="area-title">Where the work happens</h2>
-            <p>This sample is one New Jersey shop. A real site would show the street, the hours, and whether you need a ride.</p>
+            <h1>Brakes, oil, and the light on the dash.</h1>
+            <p>A New Jersey shop for the work people put off.</p>
+            <a class="btn" href="tel:+15550100109">Call (555) 010-0109</a>
           </div>
+        </section>
+        <section class="auto-row" id="services">
+          <article><h2>Brakes</h2><p>Noise, a soft pedal, or pads down to the wear bar.</p></article>
+          <article><h2>Oil and inspections</h2><p>The service that is due, and a New Jersey inspection when the sticker says so.</p></article>
+          <article><h2>Check-engine lights</h2><p>A diagnosis first, then the repair you approve.</p></article>
+        </section>
+        <section class="auto-lower" id="visit">
+          <img src="/images/auto-brake.jpg" alt="A brake disc and caliper in a lit garage" />
           <div>
-            <h2>How a job starts</h2>
-            <ol>
-              <li>You describe the noise or the light.</li>
-              <li>The shop tells you when they can look.</li>
-              <li>You approve the work before it starts.</li>
-            </ol>
+            <h2>You approve the work before it starts.</h2>
+            <p>Sample hours: Monday to Friday, 8am to 5:30pm. A real site would show the street and whether you need a ride.</p>
+            <p><a href="tel:+15550100109">(555) 010-0109</a></p>
+            <p class="note">Sample number. Yardline Auto is not a real business.</p>
           </div>
-        </div>
-      </section>
-      <section class="biz-visit" id="visit" aria-labelledby="visit-title">
-        <div class="biz-wrap">
-          <h2 id="visit-title">Call this sample shop.</h2>
-          <p>Sample hours: Monday to Friday, 8am to 5:30pm.</p>
-          <p><a href="tel:+15550100109">(555) 010-0109</a></p>
-          <p class="biz-note">Sample number. Yardline Auto is not a real business.</p>
-          <a class="biz-call" href="/#contact">Get a site like this</a>
-        </div>
-      </section>
-    </main>
-    <footer class="biz-foot">
-      <div class="biz-wrap">
-        <p>Sample website by <a href="/">The Site Shack</a>. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
-        <a href="/samples/">All samples</a>
-      </div>
+        </section>
+      </main>
+    </div>
+    <footer class="return-foot">
+      <p>Sample website by <a href="/">The Site Shack</a>. Yardline Auto is not a real business. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
+      <a href="/#contact">Get a site like this</a>
     </footer>
     <script type="module" src="/src/samples.js"></script>
   </body>

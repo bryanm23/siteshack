@@ -2,7 +2,7 @@
 
 Marketing site for The Site Shack, a New Jersey studio that builds websites for small businesses. A simple site starts at $500 and stays online for 5 years.
 
-The page introduces the studio, the kinds of sites it builds, sample layouts for common trades, how a project runs, and a project form. The sample businesses are examples, not clients.
+The page introduces the studio, the kinds of sites it builds, sample layouts for common trades, how a project runs, and a project form. The sample businesses are examples, not clients. Photos in `public/images` are generated for those samples.
 
 ## Develop
 

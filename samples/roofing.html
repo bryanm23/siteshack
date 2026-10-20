@@ -4,89 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ridge Roofing — Sample roofing website</title>
-    <meta name="description" content="A sample roofing website by The Site Shack for a New Jersey small business. Not a real company." />
+    <meta name="description" content="A sample roofing website by The Site Shack. Not a real company." />
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body data-theme="roofing">
+  <body>
     <a class="skip" href="#content">Skip to content</a>
-    <div class="sample-bar">
+    <div class="return-bar">
       <a href="/">The Site Shack</a>
-      <p>Sample · Roofing · New Jersey</p>
+      <span>Sample · Roofing</span>
       <a href="/samples/">All samples</a>
     </div>
-    <header class="biz-header">
-      <div class="biz-wrap">
-        <a class="biz-name" href="#content">Ridge Roofing</a>
-        <nav aria-label="Ridge Roofing">
-          <a href="#services">Services</a>
-          <a href="#area">Area</a>
-          <a href="#visit">Call</a>
-        </nav>
-      </div>
-    </header>
-    <main id="content">
-      <section class="biz-hero">
-        <div class="biz-wrap">
-          <p class="biz-kicker">Roofing · New Jersey</p>
-          <h1>A roof that keeps the weather where it belongs.</h1>
-          <p class="biz-lede">Repairs, replacements, and gutters for New Jersey houses. The site shows the kind of job, then makes it easy to ask for a look.</p>
-          <div class="biz-actions">
-            <a class="biz-call" href="tel:+15550100106">Call (555) 010-0106</a>
-            <a class="biz-text" href="#services">See the work</a>
-          </div>
-        </div>
-      </section>
-      <section class="biz-band" id="services" aria-labelledby="services-title">
-        <div class="biz-wrap">
-          <h2 id="services-title">What the visit covers</h2>
-          <div class="biz-grid">
-          <article>
-            <h3>Leak repairs</h3>
-            <p>The stain on the ceiling, traced back to the flashing, the boot, or a missing shingle.</p>
-          </article>
-          <article>
-            <h3>Replacements</h3>
-            <p>A full roof when patches are no longer the honest answer.</p>
-          </article>
-          <article>
-            <h3>Gutters</h3>
-            <p>Clogs, sagging runs, and the downspout that dumps next to the foundation.</p>
-          </article>
-          </div>
-        </div>
-      </section>
-      <section class="biz-split" id="area" aria-labelledby="area-title">
-        <div class="biz-wrap biz-split-grid">
+    <div class="roof">
+      <nav class="roof-nav" aria-label="Ridge Roofing">
+        <a href="#content">Ridge Roofing</a>
+        <a href="#services">Services</a>
+        <a href="#visit">Call</a>
+      </nav>
+      <main id="content">
+        <section class="roof-hero">
+          <img src="/images/roof-hero.jpg" alt="A shingled house roof after rain" />
           <div>
-            <h2 id="area-title">Where the work happens</h2>
-            <p>This sample works across New Jersey. A real site would say how far the crew travels and what roofing they install.</p>
+            <h1>A roof that keeps the weather out.</h1>
           </div>
-          <div>
-            <h2>How a job starts</h2>
-            <ol>
-              <li>You send photos of the ceiling or the roof edge.</li>
-              <li>Someone looks in person before a price is final.</li>
-              <li>The date is set when the weather allows the work.</li>
-            </ol>
+        </section>
+        <section class="roof-body">
+          <p>Repairs, replacements, and gutters for New Jersey houses. The site shows the kind of job, then makes it easy to ask for a look.</p>
+          <div class="roof-split" id="services">
+            <article><h2>Leak repairs</h2><p>The stain on the ceiling, traced to the flashing or a missing shingle.</p></article>
+            <article><h2>Replacements</h2><p>A full roof when patches are no longer the honest answer.</p></article>
+            <article><h2>Gutters</h2><p>Clogs, sagging runs, and the downspout by the foundation.</p></article>
+            <article id="visit"><h2>Call</h2><p>Sample hours: Monday to Friday, 7:30am to 5pm. <a href="tel:+15550100106">(555) 010-0106</a></p><p class="note">Sample number. Ridge Roofing is not a real business.</p></article>
           </div>
-        </div>
-      </section>
-      <section class="biz-visit" id="visit" aria-labelledby="visit-title">
-        <div class="biz-wrap">
-          <h2 id="visit-title">Call this sample shop.</h2>
-          <p>Sample hours: Monday to Friday, 7:30am to 5pm.</p>
-          <p><a href="tel:+15550100106">(555) 010-0106</a></p>
-          <p class="biz-note">Sample number. Ridge Roofing is not a real business.</p>
-          <a class="biz-call" href="/#contact">Get a site like this</a>
-        </div>
-      </section>
-    </main>
-    <footer class="biz-foot">
-      <div class="biz-wrap">
-        <p>Sample website by <a href="/">The Site Shack</a>. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
-        <a href="/samples/">All samples</a>
-      </div>
+          <img class="roof-gutter" src="/images/roof-gutter.jpg" alt="A clean gutter and downspout on clapboard siding" />
+        </section>
+      </main>
+    </div>
+    <footer class="return-foot">
+      <p>Sample website by <a href="/">The Site Shack</a>. Ridge Roofing is not a real business. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
+      <a href="/#contact">Get a site like this</a>
     </footer>
     <script type="module" src="/src/samples.js"></script>
   </body>
