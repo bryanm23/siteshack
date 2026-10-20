@@ -6,21 +6,45 @@
     <title>The Site Shack — Websites for New Jersey small businesses</title>
     <meta
       name="description"
-      content="The Site Shack is a New Jersey studio that builds websites for small businesses. A simple site starts at $500 and stays online for 5 years."
+      content="The Site Shack builds phone-first websites for New Jersey small businesses. Simple sites start at $500 for 5 years, with clear pages and SEO basics included."
     />
-    <meta name="theme-color" content="#221c16" />
-    <meta property="og:title" content="The Site Shack" />
+    <meta name="theme-color" content="#09090b" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://thesiteshack.com/" />
+    <meta property="og:title" content="The Site Shack — New Jersey small business websites" />
     <meta
       property="og:description"
-      content="Websites for New Jersey small businesses. Simple sites start at $500 for 5 years."
+      content="Websites for New Jersey small businesses. Simple sites start at $500 for 5 years. Built for phones, with SEO basics included."
     />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:url" content="https://thesiteshack.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Site Shack — New Jersey small business websites" />
+    <meta
+      name="twitter:description"
+      content="Websites for New Jersey small businesses. Simple sites start at $500 for 5 years. Built for phones, with SEO basics included."
+    />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
-  <body>
+  <body class="is-introing">
     <a class="skip" href="#main">Skip to content</a>
+
+    <div class="site-intro" id="site-intro" role="dialog" aria-modal="true" aria-labelledby="site-intro-title">
+      <div class="site-intro-veil" aria-hidden="true"></div>
+      <div class="site-intro-stage">
+        <div class="site-intro-brand">
+          <svg class="site-intro-logo" viewBox="0 0 36 36" aria-hidden="true">
+            <path d="M5 16.5 18 6l13 10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            <path d="M9 16v14h18V16" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M15 30v-8h6v8" fill="currentColor" />
+          </svg>
+          <p class="site-intro-name" id="site-intro-title" data-text="The Site Shack">The Site Shack</p>
+        </div>
+      </div>
+      <button type="button" class="site-intro-skip" id="site-intro-skip">Skip</button>
+    </div>
 
     <header class="site-header">
       <div class="wrap header-bar">
@@ -58,6 +82,7 @@
               <a href="/samples/pest-control.html">Pest control</a>
             </div>
           </div>
+          <a href="#seo">SEO</a>
           <a href="#process">Process</a>
           <a href="#questions">Questions</a>
           <a class="button button-small" href="#contact">Start a project</a>
@@ -67,62 +92,60 @@
 
     <main id="main">
       <section class="hero" id="top">
-        <div class="wrap">
-          <div class="mast">
-            <p>New Jersey small business websites</p>
-            <p>Simple sites from $500</p>
+        <div class="wrap hero-inner">
+          <p class="brand-mark">The Site Shack</p>
+          <h1>A website that works like your shop does.</h1>
+          <p class="lede">
+            Modern sites for New Jersey small businesses. Plain language, fast on a phone, from $500 for 5 years.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Start a project</a>
+            <a class="button button-secondary" href="#samples">Browse samples</a>
           </div>
-          <div class="hero-grid">
-            <div class="hero-copy">
-              <h1>A website that works like your <em>shop</em> does.</h1>
-              <p class="lede">
-                The Site Shack is based in New Jersey and builds websites for small businesses.
-                Landscapers, car washes, plumbers, and the other trades people hire close to home.
-                Plain language. Fast on a phone. Straightforward to keep current.
-              </p>
-              <p class="price-line">A simple website starts at <strong>$500</strong> and stays online for 5 years.</p>
-              <div class="hero-actions">
-                <a class="button" href="#contact">Tell us about the business</a>
-                <a class="text-link" href="/samples/">See sample sites</a>
-              </div>
-            </div>
-            <aside class="ticket" aria-label="A typical build">
-              <div class="ticket-head">
-                <p>The Site Shack</p>
-                <p>Simple site</p>
-              </div>
-              <p class="ticket-title">A website customers can use.</p>
-              <dl class="ticket-meta">
-                <div>
-                  <dt>For</dt>
-                  <dd>A New Jersey small business</dd>
-                </div>
-                <div>
-                  <dt>Simple</dt>
-                  <dd>$500, online for 5 years</dd>
-                </div>
-                <div>
-                  <dt>Job</dt>
-                  <dd>Pages, words, and a way to get in touch</dd>
-                </div>
-              </dl>
-              <p class="ticket-label">Included</p>
-              <ul class="ticket-list">
-                <li>Phone-first pages</li>
-                <li>Hours, place, and a way to call</li>
-                <li>Plain-language copy</li>
-                <li>Photos of the real business</li>
-                <li>A walkthrough at launch</li>
-              </ul>
-              <p class="ticket-note">You own the finished site.</p>
-            </aside>
-          </div>
+        </div>
+
+        <div class="wrap showcase" aria-label="Featured sample websites">
+          <a class="showcase-card showcase-featured" href="/samples/landscaping.html">
+            <img src="/images/lawn-hero.jpg" alt="" />
+            <span class="showcase-meta">
+              <span>Landscaping</span>
+              <strong>Cedar Row Lawn Care</strong>
+            </span>
+          </a>
+          <a class="showcase-card" href="/samples/car-wash.html">
+            <img src="/images/wash-hero.jpg" alt="" />
+            <span class="showcase-meta">
+              <span>Car wash</span>
+              <strong>Crossroads Car Wash</strong>
+            </span>
+          </a>
+          <a class="showcase-card" href="/samples/plumbing.html">
+            <img src="/images/plumb-faucet.jpg" alt="" />
+            <span class="showcase-meta">
+              <span>Plumbers</span>
+              <strong>Lantern Plumbing</strong>
+            </span>
+          </a>
+          <a class="showcase-card showcase-wide" href="/samples/painting.html">
+            <img src="/images/paint-room.jpg" alt="" />
+            <span class="showcase-meta">
+              <span>Painting</span>
+              <strong>Fieldstone Painting</strong>
+            </span>
+          </a>
+          <a class="showcase-card" href="/samples/auto-repair.html">
+            <img src="/images/auto-bay.jpg" alt="" />
+            <span class="showcase-meta">
+              <span>Auto repair</span>
+              <strong>Yardline Auto</strong>
+            </span>
+          </a>
         </div>
       </section>
 
       <section class="kinds" aria-label="Who the sites are for">
-        <div class="wrap">
-          <p class="kinds-label">Built for</p>
+        <div class="wrap kinds-row reveal">
+          <p class="kinds-label">Built for local trades</p>
           <ul class="kind-list">
             <li>Landscaping</li>
             <li>Car washes</li>
@@ -138,33 +161,99 @@
         </div>
       </section>
 
+      <section class="promise" aria-labelledby="promise-title">
+        <div class="wrap promise-grid glass reveal reveal-scale">
+          <div>
+            <p class="eyebrow">Simple site</p>
+            <h2 id="promise-title">$500. Five years online. Yours to keep.</h2>
+          </div>
+          <ul class="promise-list">
+            <li>Phone-first pages</li>
+            <li>Hours, place, and a way to call</li>
+            <li>Plain-language copy</li>
+            <li>SEO basics search engines can read</li>
+            <li>A walkthrough at launch</li>
+          </ul>
+        </div>
+      </section>
+
       <section class="directory" id="samples" aria-labelledby="samples-title">
         <div class="wrap">
-          <div class="section-intro">
-            <p class="eyebrow">Samples</p>
-            <h2 id="samples-title">Sample sites for trades people hire in New Jersey.</h2>
+          <div class="section-intro reveal">
+            <p class="eyebrow">All samples</p>
+            <h2 id="samples-title">Every trade layout, ready to open.</h2>
             <p>
-              These are sample layouts, not client work. Open one to see the kind of simple site a small business can start from.
+              These are sample layouts, not client work. Tap one to walk the page the way a customer would.
             </p>
           </div>
           <ul class="directory-list">
-            <li><a href="/samples/landscaping.html"><img src="/images/lawn-hero.jpg" alt="" /><span>Landscaping</span><strong>Cedar Row Lawn Care</strong></a></li>
-            <li><a href="/samples/car-wash.html"><img src="/images/wash-hero.jpg" alt="" /><span>Car wash</span><strong>Crossroads Car Wash</strong></a></li>
-            <li><a href="/samples/plumbing.html"><img src="/images/plumb-faucet.jpg" alt="" /><span>Plumbers</span><strong>Lantern Plumbing</strong></a></li>
-            <li><a href="/samples/electrical.html"><img src="/images/electric-room.jpg" alt="" /><span>Electricians</span><strong>Birch Electric</strong></a></li>
-            <li><a href="/samples/hvac.html"><img src="/images/hvac-room.jpg" alt="" /><span>HVAC</span><strong>Harbor Air</strong></a></li>
-            <li><a href="/samples/roofing.html"><img src="/images/roof-hero.jpg" alt="" /><span>Roofing</span><strong>Ridge Roofing</strong></a></li>
-            <li><a href="/samples/painting.html"><img src="/images/paint-room.jpg" alt="" /><span>Painting</span><strong>Fieldstone Painting</strong></a></li>
-            <li><a href="/samples/cleaning.html"><img src="/images/clean-kitchen.jpg" alt="" /><span>Cleaning</span><strong>Bright Hour Cleaning</strong></a></li>
-            <li><a href="/samples/auto-repair.html"><img src="/images/auto-bay.jpg" alt="" /><span>Auto repair</span><strong>Yardline Auto</strong></a></li>
-            <li><a href="/samples/pest-control.html"><img src="/images/pest-house.jpg" alt="" /><span>Pest control</span><strong>Clearpath Pest</strong></a></li>
+            <li class="reveal reveal-pop" style="--d: 0ms">
+              <a class="glass glass-card" href="/samples/landscaping.html">
+                <img src="/images/lawn-hero.jpg" alt="" />
+                <span class="directory-copy"><span>Landscaping</span><strong>Cedar Row Lawn Care</strong></span>
+              </a>
+            </li>
+            <li class="reveal reveal-pop" style="--d: 60ms">
+              <a class="glass glass-card" href="/samples/car-wash.html">
+                <img src="/images/wash-hero.jpg" alt="" />
+                <span class="directory-copy"><span>Car wash</span><strong>Crossroads Car Wash</strong></span>
+              </a>
+            </li>
+            <li class="reveal reveal-pop" style="--d: 120ms">
+              <a class="glass glass-card" href="/samples/plumbing.html">
+                <img src="/images/plumb-faucet.jpg" alt="" />
+                <span class="directory-copy"><span>Plumbers</span><strong>Lantern Plumbing</strong></span>
+              </a>
+            </li>
+            <li class="reveal reveal-pop" style="--d: 180ms">
+              <a class="glass glass-card" href="/samples/electrical.html">
+                <img src="/images/electric-room.jpg" alt="" />
+                <span class="directory-copy"><span>Electricians</span><strong>Birch Electric</strong></span>
+              </a>
+            </li>
+            <li class="reveal reveal-pop" style="--d: 0ms">
+              <a class="glass glass-card" href="/samples/hvac.html">
+                <img src="/images/hvac-room.jpg" alt="" />
+                <span class="directory-copy"><span>HVAC</span><strong>Harbor Air</strong></span>
+              </a>
+            </li>
+            <li class="reveal reveal-pop" style="--d: 60ms">
+              <a class="glass glass-card" href="/samples/roofing.html">
+                <img src="/images/roof-hero.jpg" alt="" />
+                <span class="directory-copy"><span>Roofing</span><strong>Ridge Roofing</strong></span>
+              </a>
+            </li>
+            <li class="reveal reveal-pop" style="--d: 120ms">
+              <a class="glass glass-card" href="/samples/painting.html">
+                <img src="/images/paint-room.jpg" alt="" />
+                <span class="directory-copy"><span>Painting</span><strong>Fieldstone Painting</strong></span>
+              </a>
+            </li>
+            <li class="reveal reveal-pop" style="--d: 180ms">
+              <a class="glass glass-card" href="/samples/cleaning.html">
+                <img src="/images/clean-kitchen.jpg" alt="" />
+                <span class="directory-copy"><span>Cleaning</span><strong>Bright Hour Cleaning</strong></span>
+              </a>
+            </li>
+            <li class="reveal reveal-pop" style="--d: 0ms">
+              <a class="glass glass-card" href="/samples/auto-repair.html">
+                <img src="/images/auto-bay.jpg" alt="" />
+                <span class="directory-copy"><span>Auto repair</span><strong>Yardline Auto</strong></span>
+              </a>
+            </li>
+            <li class="reveal reveal-pop" style="--d: 60ms">
+              <a class="glass glass-card" href="/samples/pest-control.html">
+                <img src="/images/pest-house.jpg" alt="" />
+                <span class="directory-copy"><span>Pest control</span><strong>Clearpath Pest</strong></span>
+              </a>
+            </li>
           </ul>
         </div>
       </section>
 
       <section class="approach" id="approach" aria-labelledby="approach-title">
         <div class="wrap approach-grid">
-          <div class="approach-copy">
+          <div class="approach-copy reveal reveal-left">
             <p class="eyebrow">The approach</p>
             <h2 id="approach-title">People look you up before they walk in.</h2>
             <p>
@@ -205,8 +294,8 @@
               </li>
             </ol>
           </div>
-          <div class="mock" aria-hidden="true">
-            <div class="mock-screen">
+          <div class="mock reveal reveal-right" aria-hidden="true">
+            <div class="mock-screen glass">
               <p class="mock-top"><span></span><span></span><span></span> Sample page</p>
               <div class="mock-region">
                 <span class="mock-n">1</span>
@@ -243,7 +332,7 @@
 
       <section class="services" id="services" aria-labelledby="services-title">
         <div class="wrap">
-          <div class="section-intro">
+          <div class="section-intro reveal">
             <p class="eyebrow">Services</p>
             <h2 id="services-title">Three kinds of sites. One New Jersey shop.</h2>
             <p>
@@ -251,7 +340,7 @@
             </p>
           </div>
           <div class="offers">
-            <article class="offer">
+            <article class="offer glass glass-card reveal" style="--d: 0ms">
               <p class="offer-index">01</p>
               <div>
                 <h3>Brochure site</h3>
@@ -261,7 +350,7 @@
                 <p class="fit"><span>Starts at</span> $500 for 5 years. A simple site for a New Jersey small business.</p>
               </div>
             </article>
-            <article class="offer">
+            <article class="offer glass glass-card reveal" style="--d: 80ms">
               <p class="offer-index">02</p>
               <div>
                 <h3>Service site</h3>
@@ -271,7 +360,7 @@
                 <p class="fit"><span>Good fit</span> Plumbers, electricians, HVAC, roofers, and other New Jersey trades.</p>
               </div>
             </article>
-            <article class="offer">
+            <article class="offer glass glass-card reveal" style="--d: 160ms">
               <p class="offer-index">03</p>
               <div>
                 <h3>Shop and menu site</h3>
@@ -285,54 +374,100 @@
         </div>
         <div class="scope" id="included">
           <div class="wrap scope-grid">
-            <div>
+            <div class="scope-card glass glass-card reveal reveal-left" style="--d: 0ms">
               <h3>In the build</h3>
               <ul class="scope-list yes">
                 <li>A design made for this business</li>
                 <li>Pages written in plain language</li>
                 <li>A layout that holds up on a phone</li>
                 <li>A contact path tested before launch</li>
-                <li>Titles and structure search engines can read</li>
+                <li>Titles, headings, and structure for search</li>
                 <li>A walkthrough for ordinary edits</li>
               </ul>
             </div>
-            <div>
+            <div class="scope-card glass glass-card reveal reveal-right" style="--d: 80ms">
               <h3>Quoted separately</h3>
               <ul class="scope-list">
                 <li>A full online store</li>
                 <li>Booking tools beyond a link you already use</li>
                 <li>Photography and logo design</li>
                 <li>Advertising and social posts</li>
-                <li>A blog written on a schedule</li>
+                <li>Ongoing SEO campaigns or paid ads</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
+      <section class="seo" id="seo" aria-labelledby="seo-title">
+        <div class="wrap">
+          <div class="section-intro reveal">
+            <p class="eyebrow">SEO</p>
+            <h2 id="seo-title">Built so people can find the business.</h2>
+            <p>
+              Search will not replace a good offer, but a site should still be clear to Google and to a customer on a phone.
+              Every Site Shack build includes the SEO basics that help a New Jersey shop show up for the work it actually does.
+            </p>
+          </div>
+          <div class="seo-grid">
+            <article class="glass glass-card reveal reveal-pop" style="--d: 0ms">
+              <h3>Clear titles and pages</h3>
+              <p>
+                Each page gets a plain title and description: the business, the trade, and the town when it belongs there.
+                Headings follow the same order a person would scan.
+              </p>
+            </article>
+            <article class="glass glass-card reveal reveal-pop" style="--d: 70ms">
+              <h3>Local details that matter</h3>
+              <p>
+                Hours, phone, service area, and a place to put a map or address. The page says what you do in the towns you cover,
+                not a pile of keyword stuffing.
+              </p>
+            </article>
+            <article class="glass glass-card reveal reveal-pop" style="--d: 140ms">
+              <h3>Fast on a phone</h3>
+              <p>
+                Search rewards pages that load cleanly on mobile. Layouts are phone-first, images are sized for the web,
+                and tap targets stay easy to hit with a thumb.
+              </p>
+            </article>
+            <article class="glass glass-card reveal reveal-pop" style="--d: 210ms">
+              <h3>Structure engines can read</h3>
+              <p>
+                Sensible URLs, alt text on photos, and structured data for a local business when it fits.
+                You get a site that is ready to be indexed, not a mystery file.
+              </p>
+            </article>
+          </div>
+          <p class="seo-note reveal" style="--d: 80ms">
+            SEO basics ship with the simple site. Ranking for competitive searches, Google Business setup, and paid ads are separate work and quoted before they start.
+          </p>
+        </div>
+      </section>
+
       <section class="process" id="process" aria-labelledby="process-title">
         <div class="wrap">
-          <div class="section-intro light">
+          <div class="section-intro light reveal">
             <p class="eyebrow">Process</p>
             <h2 id="process-title">From a conversation to a site you can run.</h2>
           </div>
           <ol class="steps">
-            <li>
+            <li class="glass glass-card reveal reveal-pop" style="--d: 0ms">
               <span>01</span>
               <h3>Listen</h3>
               <p>A call or a written note. What you sell, who it’s for, and what should happen when someone lands on the site. You send photos and the details a stranger would need.</p>
             </li>
-            <li>
+            <li class="glass glass-card reveal reveal-pop" style="--d: 70ms">
               <span>02</span>
               <h3>Draft</h3>
               <p>A site you can click through, with real words. You mark what sounds wrong. One main round of revisions is included, then the loose ends get tied.</p>
             </li>
-            <li>
+            <li class="glass glass-card reveal reveal-pop" style="--d: 140ms">
               <span>03</span>
               <h3>Launch</h3>
               <p>Domain connected, phones checked, contact path tested. You leave with a walkthrough for changing hours, prices, or a photo.</p>
             </li>
-            <li>
+            <li class="glass glass-card reveal reveal-pop" style="--d: 210ms">
               <span>04</span>
               <h3>Look after</h3>
               <p>Ordinary updates when the season, menu, or services change. Larger additions are quoted on their own before they start.</p>
@@ -343,11 +478,11 @@
 
       <section class="faq" id="questions" aria-labelledby="faq-title">
         <div class="wrap faq-grid">
-          <div>
+          <div class="reveal reveal-left">
             <p class="eyebrow">Questions</p>
             <h2 id="faq-title">Straight answers before you write.</h2>
           </div>
-          <div class="faq-list">
+          <div class="faq-list glass glass-card faq-panel reveal reveal-right">
             <div class="faq-item">
               <h3>
                 <button type="button" id="faq-button-1" aria-expanded="true" aria-controls="faq-panel-1">
@@ -425,13 +560,41 @@
                 <p>A simple website starts at $500 and stays online for 5 years. That is a straightforward site: who you are, what you do, and how to reach you. Anything beyond that is quoted before a build starts.</p>
               </div>
             </div>
+            <div class="faq-item">
+              <h3>
+                <button type="button" id="faq-button-8" aria-expanded="false" aria-controls="faq-panel-8">
+                  Is SEO included?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div id="faq-panel-8" role="region" aria-labelledby="faq-button-8" hidden>
+                <p>
+                  Yes, the basics: clear titles, headings, local details, alt text, and a structure search engines can read.
+                  We do not promise rankings. Ongoing SEO campaigns, Google Business Profile work, and ads are quoted separately.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <h3>
+                <button type="button" id="faq-button-9" aria-expanded="false" aria-controls="faq-panel-9">
+                  Will the site work on a phone?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div id="faq-panel-9" role="region" aria-labelledby="faq-button-9" hidden>
+                <p>
+                  Yes. Pages are designed for a phone first: readable type, stacked layouts, and buttons you can tap.
+                  Before launch we check the contact path and common screen sizes.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div class="wrap contact-grid">
-          <div>
+        <div class="wrap contact-shell glass reveal reveal-scale">
+          <div class="contact-copy">
             <p class="eyebrow">Start</p>
             <h2 id="contact-title">Tell us about the business.</h2>
             <p class="lede">
@@ -497,6 +660,7 @@
           <a href="#approach">Approach</a>
           <a href="#services">Services</a>
           <a href="/samples/">Samples</a>
+          <a href="#seo">SEO</a>
           <a href="#process">Process</a>
           <a href="#questions">Questions</a>
           <a href="#contact">Start a project</a>
