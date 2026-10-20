@@ -350,7 +350,8 @@ a {
   object-fit: cover;
 }
 
-.wash a.btn {
+.wash a.btn,
+.wash .btn {
   align-self: flex-start;
   background: #7ee0d6;
   color: #07221f;
@@ -553,7 +554,8 @@ a {
   color: rgba(246, 241, 230, 0.72);
 }
 
-.elec-hero .btn {
+.elec-hero .btn,
+.elec .btn {
   background: #e4a322;
   color: #1a1203;
   border-radius: 0;
@@ -1267,6 +1269,120 @@ a {
   font-weight: 680;
 }
 
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.reviews article {
+  border-top: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  padding-top: 0.95rem;
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+}
+
+.reviews blockquote {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.reviews footer {
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  opacity: 0.72;
+}
+
+.sample-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 34rem;
+}
+
+.sample-form .field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.sample-form label {
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.sample-form input,
+.sample-form textarea {
+  width: 100%;
+  appearance: none;
+  background: transparent;
+  color: inherit;
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 28%, transparent);
+  border-radius: 0;
+  padding: 0.75rem 0;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.sample-form textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.sample-form input::placeholder,
+.sample-form textarea::placeholder {
+  color: color-mix(in srgb, currentColor 42%, transparent);
+}
+
+.sample-form .btn {
+  margin-top: 0.35rem;
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.form-status:not(:empty) {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  opacity: 0.82;
+}
+
+.lawn .sample-form .btn {
+  background: #1a241c;
+  color: #f3f1eb;
+}
+
+.plumb .sample-form .btn {
+  background: #172033;
+  color: #f6f3ee;
+}
+
+.roof .sample-form .btn {
+  background: #1c1a17;
+  color: #ece7e1;
+}
+
+.paint .sample-form .btn {
+  background: #221910;
+  color: #fff8f3;
+}
+
+.wash .sample-form input,
+.wash .sample-form textarea,
+.elec .sample-form input,
+.elec .sample-form textarea,
+.auto .sample-form input,
+.auto .sample-form textarea {
+  border-bottom-color: rgba(255, 255, 255, 0.28);
+}
+
 @media (max-width: 860px) {
   .return-bar,
   .return-foot {
@@ -1333,8 +1449,14 @@ a {
   }
 
   .sheet,
-  .sheet-grid {
+  .sheet-grid,
+  .reviews {
     grid-template-columns: 1fr;
+  }
+
+  .sample-form .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   .sheet {

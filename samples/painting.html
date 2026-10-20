@@ -21,6 +21,8 @@
         <a href="#services">Services</a>
         <a href="#included">Details</a>
         <a href="#questions">Questions</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
         <a href="#visit">Call</a>
       </nav>
       <main id="content">
@@ -116,6 +118,50 @@
               <p>Often yes. They should say how long the kitchen is out of use, including dry time.</p>
             </article>
           </div>
+        </section>
+        <section class="sheet" id="reviews">
+          <p class="sheet-kicker">Sample reviews</p>
+          <h2>What a client might write.</h2>
+          <p class="sheet-lead">Example messages for this layout. They are not from real customers, and Fieldstone Painting is not a real business.</p>
+          <div class="reviews">
+            <article>
+              <blockquote>“Living room walls and trim. Prep was named in the price, so the quote matched the work.”</blockquote>
+              <footer>— V. Stone</footer>
+            </article>
+            <article>
+              <blockquote>“Exterior trim had chalked. They washed and patched before the first coat.”</blockquote>
+              <footer>— O. Bennett</footer>
+            </article>
+            <article>
+              <blockquote>“Kitchen cabinets painted in place. They told us how long the room would be out of use.”</blockquote>
+              <footer>— Y. Adler</footer>
+            </article>
+          </div>
+        </section>
+        <section class="sheet" id="contact">
+          <p class="sheet-kicker">Sample form</p>
+          <h2>Ask about a paint job.</h2>
+          <p class="sheet-lead">Nothing on this form is sent. It is here so you can see how a request looks on the page.</p>
+          <form class="sample-form" action="#" method="post" novalidate>
+            <div class="field">
+              <label for="paint-name">Your name</label>
+              <input id="paint-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="paint-town">Town</label>
+              <input id="paint-town" name="town" type="text" autocomplete="address-level2" required />
+            </div>
+            <div class="field">
+              <label for="paint-phone">Phone</label>
+              <input id="paint-phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="paint-message">Which rooms or sides?</label>
+              <textarea id="paint-message" name="message" required placeholder="Interior rooms, exterior, cabinets…"></textarea>
+            </div>
+            <button class="btn" type="submit">Send sample message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </section>
       </main>
     </div>

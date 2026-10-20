@@ -22,6 +22,8 @@
           <a href="#services">Services</a>
           <a href="#included">Details</a>
           <a href="#questions">Questions</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
           <a href="#visit">Call</a>
         </nav>
       </header>
@@ -118,6 +120,50 @@
               <p>This is a sample. A real New Jersey electrician would print the license number where a homeowner can find it.</p>
             </article>
           </div>
+        </section>
+        <section class="sheet" id="reviews">
+          <p class="sheet-kicker">Sample reviews</p>
+          <h2>What a homeowner might leave.</h2>
+          <p class="sheet-lead">Example messages for this layout. They are not from real customers, and Birch Electric is not a real business.</p>
+          <div class="reviews">
+            <article>
+              <blockquote>“Dead outlet in the kitchen. They added a GFCI and explained why the old one kept failing.”</blockquote>
+              <footer>— C. Alvarez</footer>
+            </article>
+            <article>
+              <blockquote>“New porch light and a switch by the door. Scope was written before they started.”</blockquote>
+              <footer>— N. Shaw</footer>
+            </article>
+            <article>
+              <blockquote>“Panel kept tripping. They said replacement was a different job and priced it that way.”</blockquote>
+              <footer>— T. Okonkwo</footer>
+            </article>
+          </div>
+        </section>
+        <section class="sheet" id="contact">
+          <p class="sheet-kicker">Sample form</p>
+          <h2>Describe the electrical job.</h2>
+          <p class="sheet-lead">Nothing on this form is sent. It is here so you can see how a request looks on the page.</p>
+          <form class="sample-form" action="#" method="post" novalidate>
+            <div class="field">
+              <label for="elec-name">Your name</label>
+              <input id="elec-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="elec-town">Town</label>
+              <input id="elec-town" name="town" type="text" autocomplete="address-level2" required />
+            </div>
+            <div class="field">
+              <label for="elec-phone">Phone</label>
+              <input id="elec-phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="elec-message">What stopped working?</label>
+              <textarea id="elec-message" name="message" required placeholder="Outlet, lights, panel…"></textarea>
+            </div>
+            <button class="btn" type="submit">Send sample message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </section>
       </main>
     </div>
