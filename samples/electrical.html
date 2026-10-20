@@ -3,90 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Birch Electric — Sample electricians website</title>
-    <meta name="description" content="A sample electricians website by The Site Shack for a New Jersey small business. Not a real company." />
+    <title>Birch Electric — Sample electrician website</title>
+    <meta name="description" content="A sample electrician website by The Site Shack. Not a real company." />
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body data-theme="electrical">
+  <body>
     <a class="skip" href="#content">Skip to content</a>
-    <div class="sample-bar">
+    <div class="return-bar">
       <a href="/">The Site Shack</a>
-      <p>Sample · Electricians · New Jersey</p>
+      <span>Sample · Electricians</span>
       <a href="/samples/">All samples</a>
     </div>
-    <header class="biz-header">
-      <div class="biz-wrap">
-        <a class="biz-name" href="#content">Birch Electric</a>
-        <nav aria-label="Birch Electric">
+    <div class="elec">
+      <header class="elec-top">
+        <a href="#content">Birch Electric</a>
+        <nav class="elec-nav" aria-label="Birch Electric">
           <a href="#services">Services</a>
-          <a href="#area">Area</a>
           <a href="#visit">Call</a>
         </nav>
-      </div>
-    </header>
-    <main id="content">
-      <section class="biz-hero">
-        <div class="biz-wrap">
-          <p class="biz-kicker">Electricians · New Jersey</p>
-          <h1>Panels, lights, and outlets where you need them.</h1>
-          <p class="biz-lede">A small New Jersey electrical shop for the jobs a homeowner can describe: a dead outlet, a dim room, a panel that trips.</p>
-          <div class="biz-actions">
-            <a class="biz-call" href="tel:+15550100104">Call (555) 010-0104</a>
-            <a class="biz-text" href="#services">See the work</a>
-          </div>
+      </header>
+      <main id="content">
+        <section class="elec-hero">
+          <p class="elec-index">Electrical · New Jersey</p>
+          <h1>Panels, lights, and the outlets you need.</h1>
+          <p>A small shop for the jobs a homeowner can describe: a dead outlet, a dim room, a panel that trips.</p>
+          <a class="btn" href="tel:+15550100104">Call (555) 010-0104</a>
+        </section>
+        <div class="elec-stage">
+          <img src="/images/electric-room.jpg" alt="A living room lit by a pendant and a wall sconce at dusk" />
         </div>
-      </section>
-      <section class="biz-band" id="services" aria-labelledby="services-title">
-        <div class="biz-wrap">
-          <h2 id="services-title">What the visit covers</h2>
-          <div class="biz-grid">
-          <article>
-            <h3>Outlets and switches</h3>
-            <p>New ones where the cord currently runs across the room.</p>
-          </article>
-          <article>
-            <h3>Lighting</h3>
-            <p>Kitchen lights, a porch fixture, and the switch that should have been by the door.</p>
-          </article>
-          <article>
-            <h3>Panels</h3>
-            <p>A look at a panel that trips, and a straight answer about replacement.</p>
-          </article>
+        <section class="elec-grid" id="services">
+          <img src="/images/electric-sconce.jpg" alt="A wall sconce casting warm light on plaster" />
+          <div class="elec-services">
+            <article><p class="elec-index">01</p><h2>Outlets and switches</h2><p>New ones where the cord currently runs across the room.</p></article>
+            <article><p class="elec-index">02</p><h2>Lighting</h2><p>Kitchen lights, a porch fixture, and the switch by the door.</p></article>
+            <article><p class="elec-index">03</p><h2>Panels</h2><p>A look at a panel that trips, and a straight answer about replacement.</p></article>
           </div>
-        </div>
-      </section>
-      <section class="biz-split" id="area" aria-labelledby="area-title">
-        <div class="biz-wrap biz-split-grid">
-          <div>
-            <h2 id="area-title">Where the work happens</h2>
-            <p>This sample covers New Jersey homes the shop will drive to. A real site would name the county or the towns.</p>
-          </div>
-          <div>
-            <h2>How a job starts</h2>
-            <ol>
-              <li>You say what stopped working.</li>
-              <li>The visit is scheduled in daylight, unless you have agreed otherwise.</li>
-              <li>You get the work and a note about what was changed.</li>
-            </ol>
-          </div>
-        </div>
-      </section>
-      <section class="biz-visit" id="visit" aria-labelledby="visit-title">
-        <div class="biz-wrap">
-          <h2 id="visit-title">Call this sample shop.</h2>
-          <p>Sample hours: Monday to Friday, 8am to 4:30pm.</p>
+        </section>
+        <section class="elec-visit" id="visit">
+          <p>Sample hours: Monday to Friday, 8am to 4:30pm. A real site would name the towns the shop will drive to.</p>
           <p><a href="tel:+15550100104">(555) 010-0104</a></p>
-          <p class="biz-note">Sample number. Birch Electric is not a real business.</p>
-          <a class="biz-call" href="/#contact">Get a site like this</a>
-        </div>
-      </section>
-    </main>
-    <footer class="biz-foot">
-      <div class="biz-wrap">
-        <p>Sample website by <a href="/">The Site Shack</a>. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
-        <a href="/samples/">All samples</a>
-      </div>
+          <p class="note">Sample number. Birch Electric is not a real business.</p>
+        </section>
+      </main>
+    </div>
+    <footer class="return-foot">
+      <p>Sample website by <a href="/">The Site Shack</a>. Birch Electric is not a real business. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
+      <a href="/#contact">Get a site like this</a>
     </footer>
     <script type="module" src="/src/samples.js"></script>
   </body>

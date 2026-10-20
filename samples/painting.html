@@ -4,89 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fieldstone Painting — Sample painting website</title>
-    <meta name="description" content="A sample painting website by The Site Shack for a New Jersey small business. Not a real company." />
+    <meta name="description" content="A sample painting website by The Site Shack. Not a real company." />
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body data-theme="painting">
+  <body>
     <a class="skip" href="#content">Skip to content</a>
-    <div class="sample-bar">
+    <div class="return-bar">
       <a href="/">The Site Shack</a>
-      <p>Sample · Painting · New Jersey</p>
+      <span>Sample · Painting</span>
       <a href="/samples/">All samples</a>
     </div>
-    <header class="biz-header">
-      <div class="biz-wrap">
-        <a class="biz-name" href="#content">Fieldstone Painting</a>
-        <nav aria-label="Fieldstone Painting">
-          <a href="#services">Services</a>
-          <a href="#area">Area</a>
-          <a href="#visit">Call</a>
-        </nav>
-      </div>
-    </header>
-    <main id="content">
-      <section class="biz-hero">
-        <div class="biz-wrap">
-          <p class="biz-kicker">Painting · New Jersey</p>
-          <h1>A clean edge on the rooms you actually live in.</h1>
-          <p class="biz-lede">Interior and exterior painting for New Jersey homes, with the prep named so the price is not a surprise.</p>
-          <div class="biz-actions">
-            <a class="biz-call" href="tel:+15550100107">Call (555) 010-0107</a>
-            <a class="biz-text" href="#services">See the work</a>
+    <div class="paint">
+      <nav class="paint-nav" aria-label="Fieldstone Painting">
+        <a href="#content">Fieldstone Painting</a>
+        <a href="#services">Services</a>
+        <a href="#visit">Call</a>
+      </nav>
+      <main id="content">
+        <section class="paint-hero">
+          <div class="paint-panel">
+            <h1>A clean edge on the rooms you live in.</h1>
+            <p>Interior and exterior painting for New Jersey homes, with the prep named so the price is not a surprise.</p>
+            <a class="btn" href="tel:+15550100107">Call (555) 010-0107</a>
           </div>
-        </div>
-      </section>
-      <section class="biz-band" id="services" aria-labelledby="services-title">
-        <div class="biz-wrap">
-          <h2 id="services-title">What the visit covers</h2>
-          <div class="biz-grid">
-          <article>
-            <h3>Interior rooms</h3>
-            <p>Walls, ceilings, and trim. You pick the color. The site says what prep is included.</p>
-          </article>
-          <article>
-            <h3>Exteriors</h3>
-            <p>Siding, doors, and the trim the weather has chalked.</p>
-          </article>
-          <article>
-            <h3>Cabinets</h3>
-            <p>A painted kitchen when you want the room changed and the boxes can stay.</p>
-          </article>
-          </div>
-        </div>
-      </section>
-      <section class="biz-split" id="area" aria-labelledby="area-title">
-        <div class="biz-wrap biz-split-grid">
-          <div>
-            <h2 id="area-title">Where the work happens</h2>
-            <p>This sample serves New Jersey homeowners within a reasonable drive. A real site would name that radius.</p>
-          </div>
+          <img src="/images/paint-room.jpg" alt="A sunlit living room with freshly painted warm walls" />
+        </section>
+        <section class="paint-services" id="services">
+          <article><h2>Interior rooms</h2><p>Walls, ceilings, and trim. You pick the color.</p></article>
+          <article><h2>Exteriors</h2><p>Siding, doors, and the trim the weather has chalked.</p></article>
+          <article><h2>Cabinets</h2><p>A painted kitchen when the boxes can stay.</p></article>
+        </section>
+        <section class="paint-door" id="visit">
+          <img src="/images/paint-door.jpg" alt="A deep green painted front door with a brass handle" />
           <div>
             <h2>How a job starts</h2>
-            <ol>
-              <li>You share the rooms and a few photos.</li>
-              <li>You get a written scope: prep, coats, and what is left in place.</li>
-              <li>The crew paints, then walks the rooms with you.</li>
-            </ol>
+            <p>You share the rooms and a few photos. You get a written scope: prep, coats, and what is left in place. Sample hours: Monday to Friday, 8am to 5pm.</p>
+            <p><a href="tel:+15550100107">(555) 010-0107</a></p>
+            <p class="note">Sample number. Fieldstone Painting is not a real business.</p>
           </div>
-        </div>
-      </section>
-      <section class="biz-visit" id="visit" aria-labelledby="visit-title">
-        <div class="biz-wrap">
-          <h2 id="visit-title">Call this sample shop.</h2>
-          <p>Sample hours: Monday to Friday, 8am to 5pm.</p>
-          <p><a href="tel:+15550100107">(555) 010-0107</a></p>
-          <p class="biz-note">Sample number. Fieldstone Painting is not a real business.</p>
-          <a class="biz-call" href="/#contact">Get a site like this</a>
-        </div>
-      </section>
-    </main>
-    <footer class="biz-foot">
-      <div class="biz-wrap">
-        <p>Sample website by <a href="/">The Site Shack</a>. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
-        <a href="/samples/">All samples</a>
-      </div>
+        </section>
+      </main>
+    </div>
+    <footer class="return-foot">
+      <p>Sample website by <a href="/">The Site Shack</a>. Fieldstone Painting is not a real business. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
+      <a href="/#contact">Get a site like this</a>
     </footer>
     <script type="module" src="/src/samples.js"></script>
   </body>

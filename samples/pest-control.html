@@ -4,89 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Clearpath Pest — Sample pest control website</title>
-    <meta name="description" content="A sample pest control website by The Site Shack for a New Jersey small business. Not a real company." />
+    <meta name="description" content="A sample pest control website by The Site Shack. Not a real company." />
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body data-theme="pest">
+  <body>
     <a class="skip" href="#content">Skip to content</a>
-    <div class="sample-bar">
+    <div class="return-bar">
       <a href="/">The Site Shack</a>
-      <p>Sample · Pest control · New Jersey</p>
+      <span>Sample · Pest control</span>
       <a href="/samples/">All samples</a>
     </div>
-    <header class="biz-header">
-      <div class="biz-wrap">
-        <a class="biz-name" href="#content">Clearpath Pest</a>
-        <nav aria-label="Clearpath Pest">
+    <div class="pest">
+      <header class="pest-top">
+        <a class="pest-mark" href="#content">Clearpath</a>
+        <nav class="pest-nav" aria-label="Clearpath Pest">
           <a href="#services">Services</a>
-          <a href="#area">Area</a>
           <a href="#visit">Call</a>
         </nav>
-      </div>
-    </header>
-    <main id="content">
-      <section class="biz-hero">
-        <div class="biz-wrap">
-          <p class="biz-kicker">Pest control · New Jersey</p>
-          <h1>A plan for the season they show up.</h1>
-          <p class="biz-lede">Ants, roaches, and mice for New Jersey houses. The site names the pest and the visit, without a scare page.</p>
-          <div class="biz-actions">
-            <a class="biz-call" href="tel:+15550100110">Call (555) 010-0110</a>
-            <a class="biz-text" href="#services">See the work</a>
-          </div>
-        </div>
-      </section>
-      <section class="biz-band" id="services" aria-labelledby="services-title">
-        <div class="biz-wrap">
-          <h2 id="services-title">What the visit covers</h2>
-          <div class="biz-grid">
-          <article>
-            <h3>Ants and roaches</h3>
-            <p>Where they are coming from, and a treatment that matches the room.</p>
-          </article>
-          <article>
-            <h3>Mice</h3>
-            <p>Entry points, traps, and the gap under the door that has been open all winter.</p>
-          </article>
-          <article>
-            <h3>Seasonal prevention</h3>
-            <p>A schedule for the months the house usually gets visitors.</p>
-          </article>
-          </div>
-        </div>
-      </section>
-      <section class="biz-split" id="area" aria-labelledby="area-title">
-        <div class="biz-wrap biz-split-grid">
+      </header>
+      <main id="content">
+        <section class="pest-essay">
+          <img src="/images/pest-house.jpg" alt="A tidy house with cared-for foundation plantings" />
           <div>
-            <h2 id="area-title">Where the work happens</h2>
-            <p>This sample serves New Jersey homes the technician can reach on a regular route. A real site would name that route.</p>
+            <p class="lawn-kicker">Pest control · New Jersey</p>
+            <h1>A plan for the season they show up.</h1>
+            <p>Ants, roaches, and mice, named plainly. No scare page. A visit, then a note on what was done.</p>
+            <a class="btn" href="tel:+15550100110">Call (555) 010-0110</a>
           </div>
+        </section>
+        <section class="pest-services" id="services">
+          <article><h2>Ants and roaches</h2><p>Where they are coming from, and a treatment that matches the room.</p></article>
+          <article><h2>Mice</h2><p>Entry points, and the gap under the door that has been open all winter.</p></article>
+          <article><h2>Prevention</h2><p>A schedule for the months the house usually gets visitors.</p></article>
+        </section>
+        <section class="pest-close" id="visit">
           <div>
-            <h2>How a job starts</h2>
-            <ol>
-              <li>You say what you saw and where.</li>
-              <li>A visit is set.</li>
-              <li>You get a note on what was done and what to watch.</li>
-            </ol>
+            <h2>Call with what you saw.</h2>
+            <p>Sample hours: Monday to Friday, 8am to 5pm. A real site would name the route the technician actually drives.</p>
+            <p><a href="tel:+15550100110">(555) 010-0110</a></p>
+            <p class="note">Sample number. Clearpath Pest is not a real business.</p>
           </div>
-        </div>
-      </section>
-      <section class="biz-visit" id="visit" aria-labelledby="visit-title">
-        <div class="biz-wrap">
-          <h2 id="visit-title">Call this sample shop.</h2>
-          <p>Sample hours: Monday to Friday, 8am to 5pm.</p>
-          <p><a href="tel:+15550100110">(555) 010-0110</a></p>
-          <p class="biz-note">Sample number. Clearpath Pest is not a real business.</p>
-          <a class="biz-call" href="/#contact">Get a site like this</a>
-        </div>
-      </section>
-    </main>
-    <footer class="biz-foot">
-      <div class="biz-wrap">
-        <p>Sample website by <a href="/">The Site Shack</a>. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
-        <a href="/samples/">All samples</a>
-      </div>
+          <img class="pest-border" src="/images/pest-border.jpg" alt="A neat garden border against a house foundation" />
+        </section>
+      </main>
+    </div>
+    <footer class="return-foot">
+      <p>Sample website by <a href="/">The Site Shack</a>. Clearpath Pest is not a real business. Simple sites for New Jersey small businesses start at $500 for 5 years.</p>
+      <a href="/#contact">Get a site like this</a>
     </footer>
     <script type="module" src="/src/samples.js"></script>
   </body>
