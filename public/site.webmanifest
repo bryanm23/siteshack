@@ -1,7 +1,7 @@
 {
   "name": "The Site Shack",
   "short_name": "Site Shack",
-  "description": "Websites for local and small businesses.",
+  "description": "Websites for New Jersey small businesses. Simple sites start at $500 for 5 years.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f6f1e7",

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sample websites — The Site Shack</title>
+    <meta
+      name="description"
+      content="Sample websites for New Jersey small businesses: landscaping, car washes, plumbers, and other trades. A simple site starts at $500 for 5 years."
+    />
+    <meta name="theme-color" content="#221c16" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-bar">
+        <a class="wordmark" href="/">
+          <svg viewBox="0 0 36 36" aria-hidden="true">
+            <path d="M5 16.5 18 6l13 10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            <path d="M9 16v14h18V16" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M15 30v-8h6v8" fill="currentColor" />
+          </svg>
+          <span>The Site Shack</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="/#approach">Approach</a>
+          <a href="/#services">Services</a>
+          <div class="nav-drop">
+            <a href="/samples/" aria-current="page">Samples</a>
+            <button type="button" class="submenu-toggle" aria-expanded="false" aria-controls="samples-menu">
+              <span class="visually-hidden">Show sample websites</span>
+            </button>
+            <div class="submenu" id="samples-menu">
+              <a href="/samples/">All samples</a>
+              <a href="/samples/landscaping.html">Landscaping</a>
+              <a href="/samples/car-wash.html">Car wash</a>
+              <a href="/samples/plumbing.html">Plumbers</a>
+              <a href="/samples/electrical.html">Electricians</a>
+              <a href="/samples/hvac.html">HVAC</a>
+              <a href="/samples/roofing.html">Roofing</a>
+              <a href="/samples/painting.html">Painting</a>
+              <a href="/samples/cleaning.html">Cleaning</a>
+              <a href="/samples/auto-repair.html">Auto repair</a>
+              <a href="/samples/pest-control.html">Pest control</a>
+            </div>
+          </div>
+          <a href="/#process">Process</a>
+          <a href="/#questions">Questions</a>
+          <a class="button button-small" href="/#contact">Start a project</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="directory" id="top" aria-labelledby="samples-title">
+        <div class="wrap">
+          <div class="section-intro">
+            <p class="eyebrow">Samples</p>
+            <h2 id="samples-title">Sample sites for New Jersey trades.</h2>
+            <p>
+              These layouts are examples, not client work. A simple website starts at $500 and stays online for 5 years.
+            </p>
+          </div>
+          <ul class="directory-list">
+            <li><a href="/samples/landscaping.html"><span>Landscaping</span><strong>Cedar Row Lawn Care</strong></a></li>
+            <li><a href="/samples/car-wash.html"><span>Car wash</span><strong>Crossroads Car Wash</strong></a></li>
+            <li><a href="/samples/plumbing.html"><span>Plumbers</span><strong>Lantern Plumbing</strong></a></li>
+            <li><a href="/samples/electrical.html"><span>Electricians</span><strong>Birch Electric</strong></a></li>
+            <li><a href="/samples/hvac.html"><span>HVAC</span><strong>Harbor Air</strong></a></li>
+            <li><a href="/samples/roofing.html"><span>Roofing</span><strong>Ridge Roofing</strong></a></li>
+            <li><a href="/samples/painting.html"><span>Painting</span><strong>Fieldstone Painting</strong></a></li>
+            <li><a href="/samples/cleaning.html"><span>Cleaning</span><strong>Bright Hour Cleaning</strong></a></li>
+            <li><a href="/samples/auto-repair.html"><span>Auto repair</span><strong>Yardline Auto</strong></a></li>
+            <li><a href="/samples/pest-control.html"><span>Pest control</span><strong>Clearpath Pest</strong></a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <a class="wordmark" href="/">
+            <svg viewBox="0 0 36 36" aria-hidden="true">
+              <path d="M5 16.5 18 6l13 10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              <path d="M9 16v14h18V16" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M15 30v-8h6v8" fill="currentColor" />
+            </svg>
+            <span>The Site Shack</span>
+          </a>
+          <p>Websites for New Jersey small businesses. Simple sites start at $500 for 5 years.</p>
+        </div>
+        <nav aria-label="Footer">
+          <a href="/#approach">Approach</a>
+          <a href="/#services">Services</a>
+          <a href="/samples/">Samples</a>
+          <a href="/#contact">Start a project</a>
+        </nav>
+        <div>
+          <p class="footer-label">Studio</p>
+          <a id="studio-email" href="mailto:hello@thesiteshack.com">hello@thesiteshack.com</a>
+        </div>
+        <p class="legal">© <span id="year">2026</span> The Site Shack</p>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -23,8 +23,9 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "The Site Shack",
-  description: "Website design and builds for local and small businesses.",
+  description: "Websites for New Jersey small businesses. Simple sites start at $500 for 5 years.",
   email,
+  areaServed: "New Jersey",
 };
 
 if (location.protocol.startsWith("http")) {
@@ -36,29 +37,50 @@ schemaScript.type = "application/ld+json";
 schemaScript.textContent = JSON.stringify(schema);
 document.head.appendChild(schemaScript);
 
+const samplesDrop = document.querySelector(".nav-drop");
+const samplesToggle = document.querySelector(".submenu-toggle");
+
+function setSamples(open) {
+  if (!samplesDrop || !samplesToggle) return;
+  samplesDrop.classList.toggle("is-open", open);
+  samplesToggle.setAttribute("aria-expanded", String(open));
+}
+
 function setMenu(open) {
   nav.classList.toggle("is-open", open);
   toggle.classList.toggle("is-open", open);
   toggle.setAttribute("aria-expanded", String(open));
   toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  if (!open) setSamples(false);
 }
 
 toggle.addEventListener("click", () => {
-  setMenu(!nav.classList.contains("is-open"));
+  const next = !nav.classList.contains("is-open");
+  setMenu(next);
+  if (next && window.matchMedia("(max-width: 1040px)").matches) setSamples(true);
 });
 
 nav.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => setMenu(false));
 });
 
+samplesToggle?.addEventListener("click", (event) => {
+  event.stopPropagation();
+  setSamples(!samplesDrop.classList.contains("is-open"));
+});
+
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") setMenu(false);
+  if (event.key === "Escape") {
+    setSamples(false);
+    setMenu(false);
+  }
 });
 
 document.addEventListener("click", (event) => {
-  if (!nav.classList.contains("is-open")) return;
   const target = event.target;
   if (!(target instanceof Node)) return;
+  if (samplesDrop && !samplesDrop.contains(target) && !toggle.contains(target)) setSamples(false);
+  if (!nav.classList.contains("is-open")) return;
   if (nav.contains(target) || toggle.contains(target)) return;
   setMenu(false);
 });
@@ -80,7 +102,7 @@ document.querySelectorAll(".faq-item button").forEach((button) => {
   });
 });
 
-form.addEventListener("submit", (event) => {
+form?.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const fields = ["name", "business", "trade", "town", "email", "message"];
@@ -130,7 +152,7 @@ form.addEventListener("submit", (event) => {
   window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 });
 
-form.querySelectorAll("input, textarea").forEach((field) => {
+form?.querySelectorAll("input, textarea").forEach((field) => {
   field.addEventListener("input", () => {
     if (field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement) {
       field.setCustomValidity("");
