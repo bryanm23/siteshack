@@ -28,8 +28,23 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
-  <body>
+  <body class="is-introing">
     <a class="skip" href="#main">Skip to content</a>
+
+    <div class="site-intro" id="site-intro" role="dialog" aria-modal="true" aria-labelledby="site-intro-title">
+      <div class="site-intro-veil" aria-hidden="true"></div>
+      <div class="site-intro-stage">
+        <div class="site-intro-brand">
+          <svg class="site-intro-logo" viewBox="0 0 36 36" aria-hidden="true">
+            <path d="M5 16.5 18 6l13 10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            <path d="M9 16v14h18V16" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M15 30v-8h6v8" fill="currentColor" />
+          </svg>
+          <p class="site-intro-name" id="site-intro-title" data-text="The Site Shack">The Site Shack</p>
+        </div>
+      </div>
+      <button type="button" class="site-intro-skip" id="site-intro-skip">Skip</button>
+    </div>
 
     <header class="site-header">
       <div class="wrap header-bar">
