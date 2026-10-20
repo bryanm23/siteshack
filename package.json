@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "@fontsource-variable/figtree": "^5.2.8",
@@ -14,6 +15,7 @@
     "@fontsource/dm-mono": "^5.2.7"
   },
   "devDependencies": {
-    "vite": "^7.1.10"
+    "vite": "^7.1.10",
+    "wrangler": "^4.151.3"
   }
 }
