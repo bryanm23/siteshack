@@ -1272,28 +1272,116 @@ a {
 .reviews {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.35rem;
+  gap: 1rem;
 }
 
-.reviews article {
-  border-top: 1px solid color-mix(in srgb, currentColor 22%, transparent);
-  padding-top: 0.95rem;
+.review-card {
   display: grid;
-  gap: 0.7rem;
+  gap: 0.75rem;
   align-content: start;
+  padding: 1.1rem 1.15rem 1.2rem;
+  border-radius: 12px;
+  background: #fff;
+  color: #202124;
+  border: 1px solid rgba(60, 64, 67, 0.12);
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.08), 0 2px 8px rgba(60, 64, 67, 0.06);
 }
 
-.reviews blockquote {
-  margin: 0;
+.wash .review-card,
+.elec .review-card,
+.auto .review-card {
+  background: #202124;
+  color: #e8eaed;
+  border-color: rgba(232, 234, 237, 0.12);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 4px 14px rgba(0, 0, 0, 0.28);
+}
+
+.review-head {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.review-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: "Figtree Variable", Figtree, sans-serif;
   font-size: 1.05rem;
+  font-weight: 650;
+  color: #fff;
+  background: #1a73e8;
+}
+
+.review-card:nth-child(2) .review-avatar {
+  background: #e37400;
+}
+
+.review-card:nth-child(3) .review-avatar {
+  background: #188038;
+}
+
+.review-name {
+  display: block;
+  font-family: "Figtree Variable", Figtree, sans-serif;
+  font-size: 0.98rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.review-meta {
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #5f6368;
+}
+
+.wash .review-meta,
+.elec .review-meta,
+.auto .review-meta {
+  color: #9aa0a6;
+}
+
+.review-stars {
+  display: inline-flex;
+  gap: 0.12rem;
+  margin: 0;
+  color: #fbbc04;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.review-stars span {
+  font-family: "Figtree Variable", Figtree, sans-serif;
+}
+
+.review-stars .off {
+  color: #dadce0;
+}
+
+.wash .review-stars .off,
+.elec .review-stars .off,
+.auto .review-stars .off {
+  color: #5f6368;
+}
+
+.review-text {
+  margin: 0;
+  font-size: 0.95rem;
   line-height: 1.55;
+  color: #3c4043;
   text-wrap: pretty;
 }
 
-.reviews footer {
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-  opacity: 0.72;
+.wash .review-text,
+.elec .review-text,
+.auto .review-text {
+  color: #dadce0;
 }
 
 .sample-form {
