@@ -20,6 +20,8 @@ npm run preview
 
 `npm run build` writes a static site to `dist/`.
 
+Cloudflare Workers deploys that folder with `npx wrangler deploy`. The Worker settings live in `wrangler.jsonc`.
+
 ## Before you publish
 
 Change the studio address in the footer of `index.html` (`hello@thesiteshack.com`). The project form addresses that same link.
