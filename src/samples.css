@@ -1,0 +1,379 @@
+:root {
+  color-scheme: light;
+  --ink: #221c16;
+  --paper: #f6f1e7;
+  --straw: #e4c27a;
+  --bg: #f7f4ee;
+  --fg: #221c16;
+  --muted: #4a4036;
+  --accent: #1f4d3a;
+  --on-accent: #f6f1e7;
+  font-family: "Figtree Variable", Figtree, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+[data-theme="lawn"] {
+  --bg: #f3f6f1;
+  --accent: #1f4d3a;
+  --on-accent: #f4f7f2;
+  --muted: #3e5346;
+}
+
+[data-theme="wash"] {
+  --bg: #f4f7f8;
+  --accent: #0e4d6c;
+  --on-accent: #f3f8fa;
+  --muted: #3d5560;
+}
+
+[data-theme="plumbing"] {
+  --bg: #f6f3ee;
+  --accent: #16324f;
+  --on-accent: #f6f3ee;
+  --muted: #3e4c5c;
+}
+
+[data-theme="electrical"] {
+  --bg: #f7f4ea;
+  --accent: #1c1c1c;
+  --on-accent: #f7f4ea;
+  --muted: #4a463c;
+}
+
+[data-theme="hvac"] {
+  --bg: #f4f6f7;
+  --accent: #243442;
+  --on-accent: #f4f7f8;
+  --muted: #44525c;
+}
+
+[data-theme="roofing"] {
+  --bg: #f6f1ec;
+  --accent: #6e2f2c;
+  --on-accent: #f8f3ef;
+  --muted: #5c463f;
+}
+
+[data-theme="painting"] {
+  --bg: #f7f4ef;
+  --accent: #9c3418;
+  --on-accent: #fff8f3;
+  --muted: #5a463c;
+}
+
+[data-theme="cleaning"] {
+  --bg: #f5f7f6;
+  --accent: #245744;
+  --on-accent: #f4f8f6;
+  --muted: #3e534c;
+}
+
+[data-theme="auto"] {
+  --bg: #f4f1ee;
+  --accent: #1a1a1a;
+  --on-accent: #f6f1e7;
+  --muted: #4a403c;
+}
+
+[data-theme="pest"] {
+  --bg: #f6f4ee;
+  --accent: #3d4a28;
+  --on-accent: #f7f6ef;
+  --muted: #4d5340;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3,
+p,
+ol {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+.biz-name {
+  font-family: "Fraunces Variable", Fraunces, Georgia, serif;
+  font-weight: 560;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+a {
+  color: inherit;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 5;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.55rem 0.8rem;
+  text-decoration: none;
+}
+
+.skip:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--straw);
+  outline-offset: 3px;
+}
+
+.sample-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sample-bar a {
+  color: var(--straw);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sample-bar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.sample-bar p {
+  margin: 0;
+}
+
+.biz-header,
+.biz-hero,
+.biz-band,
+.biz-split,
+.biz-visit,
+.biz-foot {
+  padding-inline: 1.25rem;
+}
+
+.biz-wrap {
+  width: min(980px, 100%);
+  margin-inline: auto;
+}
+
+.biz-header .biz-wrap,
+.biz-foot .biz-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.biz-header {
+  padding-block: 1rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--fg) 12%, transparent);
+}
+
+.biz-name {
+  font-size: 1.45rem;
+  text-decoration: none;
+}
+
+.biz-header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.biz-header nav a {
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.biz-header nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.biz-hero {
+  background: var(--accent);
+  color: var(--on-accent);
+  padding-block: 4.5rem 3.5rem;
+}
+
+.biz-kicker {
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.biz-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  max-width: 12ch;
+  text-wrap: balance;
+}
+
+.biz-lede {
+  max-width: 36rem;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: color-mix(in srgb, var(--on-accent) 88%, transparent);
+}
+
+.biz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.2rem;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+
+.biz-call {
+  display: inline-flex;
+  align-items: center;
+  background: var(--on-accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.85rem 1.1rem;
+  box-shadow: 3px 3px 0 color-mix(in srgb, var(--ink) 35%, transparent);
+}
+
+.biz-text {
+  font-weight: 700;
+  color: var(--on-accent);
+}
+
+.biz-band,
+.biz-split,
+.biz-visit {
+  padding-block: 3.25rem;
+}
+
+.biz-band h2,
+.biz-split h2,
+.biz-visit h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+.biz-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.biz-grid article {
+  border-top: 2px solid var(--accent);
+  padding-top: 0.8rem;
+}
+
+.biz-grid h3 {
+  font-size: 1.55rem;
+  margin-bottom: 0.4rem;
+}
+
+.biz-grid p,
+.biz-split p,
+.biz-visit p {
+  color: var(--muted);
+}
+
+.biz-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.biz-split ol {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.45rem;
+}
+
+.biz-visit {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.biz-visit p,
+.biz-visit a {
+  color: var(--on-accent);
+}
+
+.biz-visit a {
+  font-family: "Fraunces Variable", Fraunces, Georgia, serif;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.biz-note {
+  margin-top: 0.8rem;
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.biz-visit .biz-call {
+  margin-top: 1.2rem;
+}
+
+.biz-foot {
+  padding-block: 1.25rem 1.5rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.biz-foot p {
+  max-width: 40rem;
+}
+
+.biz-foot a {
+  color: var(--straw);
+}
+
+@media (max-width: 760px) {
+  .sample-bar {
+    flex-wrap: wrap;
+  }
+
+  .sample-bar p {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .biz-header .biz-wrap,
+  .biz-grid,
+  .biz-split-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .biz-hero {
+    padding-block: 3rem 2.5rem;
+  }
+}
