@@ -23,9 +23,15 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "The Site Shack",
-  description: "Websites for New Jersey small businesses. Simple sites start at $500 for 5 years.",
+  description:
+    "The Site Shack builds phone-first websites for New Jersey small businesses. Simple sites start at $500 for 5 years, with SEO basics included.",
   email,
-  areaServed: "New Jersey",
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "New Jersey",
+  },
+  priceRange: "$500+",
+  knowsAbout: ["Website design", "Local SEO", "Small business websites"],
 };
 
 if (location.protocol.startsWith("http")) {

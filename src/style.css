@@ -33,6 +33,8 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -566,8 +568,41 @@ section[id] {
 .directory,
 .approach,
 .services,
+.seo,
 .faq {
   padding: 5rem 0;
+}
+
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.seo-grid article {
+  padding: 1.35rem 1.4rem 1.45rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.seo-grid h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.55rem;
+  letter-spacing: -0.035em;
+}
+
+.seo-grid p {
+  color: var(--muted);
+  max-width: 36rem;
+}
+
+.seo-note {
+  margin-top: 1.35rem;
+  max-width: 46rem;
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .section-intro {
@@ -1188,7 +1223,8 @@ textarea:user-invalid {
   .scope-grid,
   .footer-grid,
   .directory-list,
-  .promise-grid {
+  .promise-grid,
+  .seo-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1263,6 +1299,7 @@ textarea:user-invalid {
   .directory,
   .approach,
   .services,
+  .seo,
   .faq,
   .process,
   .contact,
@@ -1279,23 +1316,34 @@ textarea:user-invalid {
   }
 
   .brand-mark {
-    font-size: clamp(2.6rem, 14vw, 3.6rem);
+    font-size: clamp(2.4rem, 12vw, 3.4rem);
+    max-width: 10ch;
   }
 
   .hero h1 {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
+    max-width: none;
+  }
+
+  .hero .lede {
+    font-size: 1rem;
   }
 
   .showcase {
     grid-template-columns: 1fr;
     grid-template-rows: none;
+    gap: 0.7rem;
   }
 
   .showcase-featured,
   .showcase-wide,
   .showcase-card {
     grid-column: auto;
-    min-height: 14rem;
+    min-height: 12.5rem;
+  }
+
+  .showcase-meta strong {
+    font-size: 1.05rem;
   }
 
   .offer,
@@ -1313,20 +1361,38 @@ textarea:user-invalid {
     padding: 1.35rem;
     border-radius: 20px;
   }
+
+  .seo-grid article {
+    padding: 1.15rem 1.1rem 1.25rem;
+  }
+
+  .contact .button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
   .wrap {
-    width: min(1180px, calc(100% - 1.4rem));
+    width: min(1180px, calc(100% - 1.25rem));
+  }
+
+  .directory-list img,
+  .directory-list a {
+    height: auto;
+  }
+
+  .directory-list a {
+    grid-template-rows: 9.5rem auto;
   }
 
   .directory-list img {
-    height: 10rem;
+    height: 9.5rem;
   }
 
   .nav-toggle,
   .submenu-toggle,
-  .faq-item button {
+  .faq-item button,
+  .showcase-card {
     min-height: 44px;
   }
 
@@ -1350,6 +1416,20 @@ textarea:user-invalid {
 
   .hero-actions .button {
     width: 100%;
+  }
+
+  .showcase-featured,
+  .showcase-wide,
+  .showcase-card {
+    min-height: 11.5rem;
+  }
+
+  .kinds {
+    padding-inline: 0;
+  }
+
+  .kind-list li {
+    font-size: 0.9rem;
   }
 }
 
