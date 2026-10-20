@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
 }
@@ -67,6 +72,9 @@ a {
 .return-foot a {
   color: #fff;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 
 .return-bar a:hover,
@@ -115,6 +123,12 @@ a {
   letter-spacing: -0.03em;
 }
 
+.lawn-bar,
+.elec-top,
+.pest-top {
+  flex-wrap: wrap;
+}
+
 .lawn-bar nav,
 .wash-nav,
 .plumb-side nav,
@@ -124,9 +138,29 @@ a {
 .paint-nav,
 .clean-nav,
 .auto-nav,
-.pest-nav {
+.pest-nav,
+.clean-nav span,
+.auto-nav span {
   display: flex;
-  gap: 1.1rem;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.1rem;
+}
+
+.lawn-bar a,
+.wash-nav a,
+.plumb-side a,
+.elec-top a,
+.hvac-nav a,
+.roof-nav a,
+.paint-nav a,
+.clean-nav a,
+.auto-nav a,
+.pest-top a,
+.pest-nav a,
+.btn,
+.lawn-hero a {
+  min-height: 44px;
+  text-decoration: none;
 }
 
 .lawn-bar a,
@@ -174,16 +208,22 @@ a {
 
 .lawn h1,
 .lawn h2,
+.lawn h3,
 .plumb h1,
 .plumb h2,
+.plumb h3,
 .roof h1,
 .roof h2,
+.roof h3,
 .paint h1,
 .paint h2,
+.paint h3,
 .pest h1,
 .pest h2,
+.pest h3,
 .hvac h1,
-.hvac h2 {
+.hvac h2,
+.hvac h3 {
   font-family: "Fraunces Variable", Georgia, serif;
   font-weight: 520;
   letter-spacing: -0.035em;
@@ -1135,6 +1175,98 @@ a {
   color: #f6f3ea;
 }
 
+.sheet {
+  width: min(1040px, calc(100% - 2.5rem));
+  margin-inline: auto;
+  padding: 3.5rem 0 0.5rem;
+}
+
+.sheet:last-child {
+  padding-bottom: 4.25rem;
+}
+
+.plumb .sheet {
+  width: 100%;
+}
+
+.hvac .sheet {
+  text-align: left;
+}
+
+.sheet-kicker {
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.62;
+  margin-bottom: 0.7rem;
+}
+
+.sheet h2 {
+  font-size: clamp(2rem, 4.2vw, 3.15rem);
+  max-width: 18ch;
+  text-wrap: balance;
+  margin-bottom: 0.85rem;
+}
+
+.wash .sheet h2,
+.elec .sheet h2,
+.auto .sheet h2,
+.clean .sheet h2 {
+  font-family: "Figtree Variable", Figtree, sans-serif;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.sheet-lead {
+  max-width: 40rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+.sheet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.sheet-grid article,
+.sheet-faq article {
+  border-top: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  padding-top: 0.95rem;
+}
+
+.sheet h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.55rem;
+}
+
+.sheet p,
+.sheet li {
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.sheet ul,
+.sheet ol {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.sheet-faq {
+  display: grid;
+  gap: 1.15rem;
+  max-width: 44rem;
+}
+
+.sheet a {
+  font-weight: 680;
+}
+
 @media (max-width: 860px) {
   .return-bar,
   .return-foot {
@@ -1190,8 +1322,116 @@ a {
     text-align: left;
   }
 
-  .hvac-nav {
+  .hvac-nav,
+  .roof-nav,
+  .paint-nav,
+  .clean-nav,
+  .auto-nav {
     justify-content: flex-start;
     flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+  }
+
+  .sheet,
+  .sheet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sheet {
+    width: min(1040px, calc(100% - 1.5rem));
+    padding-top: 2.75rem;
+  }
+
+  .lawn-hero-copy {
+    right: 1.25rem;
+  }
+
+  .lawn-feature img,
+  .hvac-photo img,
+  .hvac-unit img,
+  .pest-essay img,
+  .pest-border,
+  .clean-frame img,
+  .clean-bed,
+  .paint-door img,
+  .roof-gutter,
+  .auto-lower img,
+  .plumb-photos img,
+  .plumb-photos img:first-child,
+  .plumb-photos img:last-child {
+    height: 16rem;
+  }
+
+  .return-bar,
+  .return-foot,
+  .elec-top,
+  .roof-nav,
+  .paint-nav,
+  .clean-nav,
+  .auto-nav,
+  .elec-hero,
+  .plumb-main {
+    padding-inline: 1rem;
+  }
+
+  .wash-hero,
+  .paint-hero {
+    min-height: 0;
+  }
+
+  .wash-copy,
+  .paint-panel {
+    padding: 1.75rem 1.1rem;
+  }
+
+  .wash-hero img {
+    min-height: 46vh;
+    height: 46vh;
+  }
+
+  .auto-hero div {
+    right: 1.1rem;
+    left: 1.1rem;
+    max-width: none;
+  }
+
+  .wash-services article {
+    padding: 1.35rem 1.1rem 1.5rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .lawn-hero,
+  .lawn-hero img,
+  .roof-hero,
+  .roof-hero img,
+  .auto-hero,
+  .auto-hero img {
+    min-height: 62vh;
+    height: 62vh;
+  }
+
+  .lawn h1,
+  .wash h1,
+  .plumb h1,
+  .elec h1,
+  .hvac h1,
+  .roof h1,
+  .paint h1,
+  .clean h1,
+  .auto h1,
+  .pest h1 {
+    font-size: clamp(2.2rem, 11vw, 3rem);
+  }
+
+  .lawn-bar,
+  .elec-top,
+  .pest-top,
+  .roof-nav,
+  .paint-nav,
+  .clean-nav,
+  .auto-nav {
+    align-items: flex-start;
+    gap: 0.35rem 0.8rem;
   }
 }

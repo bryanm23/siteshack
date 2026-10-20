@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -298,6 +299,7 @@ section[id] {
   border: 0;
   border-radius: 999px;
   padding: 0.85rem 1.15rem;
+  min-height: 44px;
   font-weight: 620;
   font-size: 0.95rem;
   line-height: 1;
@@ -1089,6 +1091,10 @@ textarea:user-invalid {
     height: auto;
   }
 
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
   .header-bar {
     min-height: var(--header);
     flex-wrap: wrap;
@@ -1105,6 +1111,9 @@ textarea:user-invalid {
 
   .site-nav.is-open {
     display: flex;
+    max-height: calc(100dvh - var(--header) - 0.25rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .site-nav > a,
@@ -1166,6 +1175,51 @@ textarea:user-invalid {
 
   h1 {
     font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    width: min(1120px, calc(100% - 1.5rem));
+  }
+
+  .directory-list a {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .directory-list img {
+    width: 100%;
+    height: 9rem;
+    grid-row: auto;
+    margin-bottom: 0.35rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .nav-toggle,
+  .submenu-toggle,
+  .faq-item button {
+    min-height: 44px;
+  }
+
+  .submenu-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ticket {
+    padding: 1.1rem;
+  }
+
+  .site-nav > a,
+  .nav-drop > a,
+  .submenu a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 }
 
