@@ -9,18 +9,17 @@ const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector("#site-nav");
 const emailLink = document.querySelector("#studio-email");
-const email = emailLink.textContent.trim();
+const email = emailLink?.textContent.trim() || "";
 const year = document.querySelector("#year");
 const form = document.querySelector("#project-form");
 const status = document.querySelector("#form-status");
-const composed = document.querySelector("#composed");
-const composedBody = document.querySelector("#composed-body");
-const composedEmail = document.querySelector("#composed-email");
+const submitBtn = form?.querySelector('button[type="submit"]');
 const intro = document.querySelector("#site-intro");
 const introSkip = document.querySelector("#site-intro-skip");
 const introName = document.querySelector(".site-intro-name");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const INTRO_KEY = "siteshack-intro-seen";
+const WEB3FORMS_KEY = "fa2f14a0-2c41-405c-afed-0514eda3bfef";
 
 year.textContent = String(new Date().getFullYear());
 
@@ -206,7 +205,7 @@ document.querySelectorAll(".faq-item button").forEach((button) => {
   });
 });
 
-form?.addEventListener("submit", (event) => {
+form?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const fields = ["name", "business", "trade", "town", "email", "message"];
@@ -234,26 +233,39 @@ form?.addEventListener("submit", (event) => {
   }
 
   const data = new FormData(form);
-  const read = (name) => String(data.get(name) || "").trim();
-  const subject = `Website project: ${read("business")}`;
-  const body = [
-    `Name: ${read("name")}`,
-    `Business: ${read("business")}`,
-    `What they do: ${read("trade")}`,
-    `Town: ${read("town")}`,
-    `Email: ${read("email")}`,
-    `Phone: ${read("phone") || "Not given"}`,
-    "",
-    read("message"),
-  ].join("\n");
+  const business = String(data.get("business") || "").trim();
+  data.append("access_key", WEB3FORMS_KEY);
+  data.append("subject", `Website project: ${business || "New inquiry"}`);
+  data.append("from_name", "The Site Shack");
 
-  composed.hidden = false;
-  composedBody.textContent = body;
-  composedEmail.textContent = email;
-  composedEmail.href = `mailto:${email}`;
-  status.textContent = "Your email app should open with this note. A copy is here in case it doesn't.";
+  const originalText = submitBtn?.textContent || "Send the note";
+  if (submitBtn) {
+    submitBtn.textContent = "Sending…";
+    submitBtn.disabled = true;
+  }
+  if (status) status.textContent = "Sending your note…";
 
-  window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: data,
+    });
+    const result = await response.json();
+
+    if (response.ok && result.success) {
+      form.reset();
+      if (status) status.textContent = "Sent. We’ll get back to you soon.";
+    } else {
+      if (status) status.textContent = result.message || "Couldn’t send that note. Try again in a moment.";
+    }
+  } catch {
+    if (status) status.textContent = "Something went wrong. Check your connection and try again.";
+  } finally {
+    if (submitBtn) {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  }
 });
 
 form?.querySelectorAll("input, textarea").forEach((field) => {

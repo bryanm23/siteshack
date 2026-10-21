@@ -563,7 +563,8 @@
               A few lines is enough. Simple sites start at $500 for 5 years. Anything larger gets a written quote before a build starts.
             </p>
           </div>
-          <form id="project-form" novalidate>
+          <form id="project-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div class="form-grid">
               <div class="field">
                 <label for="name">Your name <span aria-hidden="true">*</span></label>
@@ -596,10 +597,6 @@
             </div>
             <button class="button button-light" type="submit">Send the note</button>
             <p id="form-status" class="form-status" role="status"></p>
-            <div id="composed" class="composed" hidden>
-              <p>Send this note to <a id="composed-email" href=""></a></p>
-              <pre id="composed-body"></pre>
-            </div>
           </form>
         </div>
       </section>
