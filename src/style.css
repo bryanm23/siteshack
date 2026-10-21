@@ -1296,8 +1296,22 @@ textarea:user-invalid {
   border-top: 1px solid var(--line);
 }
 
-.composed a {
+.composed-retry {
+  display: inline;
+  margin-left: 0.35rem;
+  padding: 0;
+  border: 0;
+  background: none;
   color: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+
+.composed-retry:hover {
+  color: #fff;
 }
 
 .composed pre {

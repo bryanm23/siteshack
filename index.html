@@ -635,7 +635,10 @@
             <button class="button button-light" type="submit">Send the note</button>
             <p id="form-status" class="form-status" role="status"></p>
             <div id="composed" class="composed" hidden>
-              <p>Send this note to <a id="composed-email" href=""></a></p>
+              <p>
+                If your email app didn’t open, copy the note below into a new message.
+                <button type="button" class="composed-retry" id="composed-retry">Try email app again</button>
+              </p>
               <pre id="composed-body"></pre>
             </div>
           </form>

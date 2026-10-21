@@ -9,13 +9,13 @@ const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector("#site-nav");
 const emailLink = document.querySelector("#studio-email");
-const email = emailLink.textContent.trim();
+const email = emailLink?.textContent.trim() || "";
 const year = document.querySelector("#year");
 const form = document.querySelector("#project-form");
 const status = document.querySelector("#form-status");
 const composed = document.querySelector("#composed");
 const composedBody = document.querySelector("#composed-body");
-const composedEmail = document.querySelector("#composed-email");
+const composedRetry = document.querySelector("#composed-retry");
 const intro = document.querySelector("#site-intro");
 const introSkip = document.querySelector("#site-intro-skip");
 const introName = document.querySelector(".site-intro-name");
@@ -23,6 +23,18 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 const INTRO_KEY = "siteshack-intro-seen";
 
 year.textContent = String(new Date().getFullYear());
+
+/** Assemble the form inbox at runtime so it is not sitting in HTML for scrapers. */
+function formInbox() {
+  const user = [98, 114, 121, 97, 110, 46, 109, 97, 100, 101, 119, 101, 108, 108, 46, 98, 109];
+  const host = [103, 109, 97, 105, 108, 46, 99, 111, 109];
+  return `${String.fromCharCode(...user)}${String.fromCharCode(64)}${String.fromCharCode(...host)}`;
+}
+
+function openMailDraft(subject, body) {
+  const to = formInbox();
+  window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
 
 function finishIntro() {
   document.body.classList.remove("is-introing");
@@ -206,6 +218,8 @@ document.querySelectorAll(".faq-item button").forEach((button) => {
   });
 });
 
+let lastDraft = null;
+
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -247,13 +261,16 @@ form?.addEventListener("submit", (event) => {
     read("message"),
   ].join("\n");
 
+  lastDraft = { subject, body };
   composed.hidden = false;
   composedBody.textContent = body;
-  composedEmail.textContent = email;
-  composedEmail.href = `mailto:${email}`;
-  status.textContent = "Your email app should open with this note. A copy is here in case it doesn't.";
+  status.textContent = "Your email app should open with this note. A copy is here in case it doesn’t.";
+  openMailDraft(subject, body);
+});
 
-  window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+composedRetry?.addEventListener("click", () => {
+  if (!lastDraft) return;
+  openMailDraft(lastDraft.subject, lastDraft.body);
 });
 
 form?.querySelectorAll("input, textarea").forEach((field) => {
