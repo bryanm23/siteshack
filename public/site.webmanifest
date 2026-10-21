@@ -1,11 +1,11 @@
 {
   "name": "The Site Shack",
   "short_name": "Site Shack",
-  "description": "Websites for New Jersey small businesses. Simple sites start at $500 for 5 years.",
+  "description": "Phone-first websites for small businesses in New Jersey, New York, Pennsylvania, and Connecticut. Simple sites start at $500 for 5 years.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f6f1e7",
-  "theme_color": "#221c16",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
   "icons": [
     {
       "src": "/favicon.svg",

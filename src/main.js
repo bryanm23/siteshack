@@ -8,8 +8,6 @@ import "./style.css";
 const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector("#site-nav");
-const emailLink = document.querySelector("#studio-email");
-const email = emailLink?.textContent.trim() || "";
 const year = document.querySelector("#year");
 const form = document.querySelector("#project-form");
 const status = document.querySelector("#form-status");
@@ -115,30 +113,6 @@ if (skipIntro) {
 } else {
   playIntro();
 }
-
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "The Site Shack",
-  description:
-    "The Site Shack builds phone-first websites for New Jersey small businesses. Simple sites start at $500 for 5 years, with SEO basics included.",
-  email,
-  areaServed: {
-    "@type": "AdministrativeArea",
-    name: "New Jersey",
-  },
-  priceRange: "$500+",
-  knowsAbout: ["Website design", "Local SEO", "Small business websites"],
-};
-
-if (location.protocol.startsWith("http")) {
-  schema.url = location.origin;
-}
-
-const schemaScript = document.createElement("script");
-schemaScript.type = "application/ld+json";
-schemaScript.textContent = JSON.stringify(schema);
-document.head.appendChild(schemaScript);
 
 const samplesDrop = document.querySelector(".nav-drop");
 const samplesToggle = document.querySelector(".submenu-toggle");
