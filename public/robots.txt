@@ -1,4 +1,16 @@
 User-agent: *
 Allow: /
 
+# Sample trade demos are examples only; they are noindex and omitted from the sitemap.
+Disallow: /samples/landscaping.html
+Disallow: /samples/car-wash.html
+Disallow: /samples/plumbing.html
+Disallow: /samples/electrical.html
+Disallow: /samples/hvac.html
+Disallow: /samples/roofing.html
+Disallow: /samples/painting.html
+Disallow: /samples/cleaning.html
+Disallow: /samples/auto-repair.html
+Disallow: /samples/pest-control.html
+
 Sitemap: https://thesiteshack.com/sitemap.xml

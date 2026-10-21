@@ -28,6 +28,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve("index.html"),
+        areas: resolve("areas/index.html"),
         ...Object.fromEntries(
           samplePages.map((name) => [
             name === "index" ? "samples" : name,
