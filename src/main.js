@@ -13,28 +13,15 @@ const email = emailLink?.textContent.trim() || "";
 const year = document.querySelector("#year");
 const form = document.querySelector("#project-form");
 const status = document.querySelector("#form-status");
-const composed = document.querySelector("#composed");
-const composedBody = document.querySelector("#composed-body");
-const composedRetry = document.querySelector("#composed-retry");
+const submitBtn = form?.querySelector('button[type="submit"]');
 const intro = document.querySelector("#site-intro");
 const introSkip = document.querySelector("#site-intro-skip");
 const introName = document.querySelector(".site-intro-name");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const INTRO_KEY = "siteshack-intro-seen";
+const WEB3FORMS_KEY = "fa2f14a0-2c41-405c-afed-0514eda3bfef";
 
 year.textContent = String(new Date().getFullYear());
-
-/** Assemble the form inbox at runtime so it is not sitting in HTML for scrapers. */
-function formInbox() {
-  const user = [98, 114, 121, 97, 110, 46, 109, 97, 100, 101, 119, 101, 108, 108, 46, 98, 109];
-  const host = [103, 109, 97, 105, 108, 46, 99, 111, 109];
-  return `${String.fromCharCode(...user)}${String.fromCharCode(64)}${String.fromCharCode(...host)}`;
-}
-
-function openMailDraft(subject, body) {
-  const to = formInbox();
-  window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
 
 function finishIntro() {
   document.body.classList.remove("is-introing");
@@ -218,9 +205,7 @@ document.querySelectorAll(".faq-item button").forEach((button) => {
   });
 });
 
-let lastDraft = null;
-
-form?.addEventListener("submit", (event) => {
+form?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const fields = ["name", "business", "trade", "town", "email", "message"];
@@ -248,29 +233,39 @@ form?.addEventListener("submit", (event) => {
   }
 
   const data = new FormData(form);
-  const read = (name) => String(data.get(name) || "").trim();
-  const subject = `Website project: ${read("business")}`;
-  const body = [
-    `Name: ${read("name")}`,
-    `Business: ${read("business")}`,
-    `What they do: ${read("trade")}`,
-    `Town: ${read("town")}`,
-    `Email: ${read("email")}`,
-    `Phone: ${read("phone") || "Not given"}`,
-    "",
-    read("message"),
-  ].join("\n");
+  const business = String(data.get("business") || "").trim();
+  data.append("access_key", WEB3FORMS_KEY);
+  data.append("subject", `Website project: ${business || "New inquiry"}`);
+  data.append("from_name", "The Site Shack");
 
-  lastDraft = { subject, body };
-  composed.hidden = false;
-  composedBody.textContent = body;
-  status.textContent = "Your email app should open with this note. A copy is here in case it doesn’t.";
-  openMailDraft(subject, body);
-});
+  const originalText = submitBtn?.textContent || "Send the note";
+  if (submitBtn) {
+    submitBtn.textContent = "Sending…";
+    submitBtn.disabled = true;
+  }
+  if (status) status.textContent = "Sending your note…";
 
-composedRetry?.addEventListener("click", () => {
-  if (!lastDraft) return;
-  openMailDraft(lastDraft.subject, lastDraft.body);
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: data,
+    });
+    const result = await response.json();
+
+    if (response.ok && result.success) {
+      form.reset();
+      if (status) status.textContent = "Sent. We’ll get back to you soon.";
+    } else {
+      if (status) status.textContent = result.message || "Couldn’t send that note. Try again in a moment.";
+    }
+  } catch {
+    if (status) status.textContent = "Something went wrong. Check your connection and try again.";
+  } finally {
+    if (submitBtn) {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  }
 });
 
 form?.querySelectorAll("input, textarea").forEach((field) => {
